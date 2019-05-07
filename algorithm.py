@@ -37,10 +37,7 @@ def aa(train_matrix):
 
 def pa(train_matrix):
     nodes_degree = sum(train_matrix)
-    print(type(nodes_degree))
-    nodes_degree=np.reshape(nodes_degree, (nodes_degree.shape[0], 1))
-    # nodes_degree.shape = (nodes_degree.shape[0], 1)
-    print(nodes_degree.shape)
+    nodes_degree = np.reshape(nodes_degree, (nodes_degree.shape[0], 1))
     nodes_degree_transposed = nodes_degree.T
     pa_matrix = np.dot(nodes_degree, nodes_degree_transposed)
     return pa_matrix
